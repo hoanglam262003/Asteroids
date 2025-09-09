@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public Bullet bullet;
-    public GameManager gameManager;
     public float thrustForce = 1.0f;
     public float turnForce = 1.0f;
     private Rigidbody2D rb;
@@ -65,7 +64,7 @@ public class Player : MonoBehaviour
 
             this.gameObject.SetActive(false);
 
-            this.gameManager.PlayerDied();
+            GameManager.Instance.PlayerDied();
         }
     }
 }
